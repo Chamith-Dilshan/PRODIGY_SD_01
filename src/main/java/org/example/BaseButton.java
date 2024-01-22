@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class BaseButton extends JButton implements ActionListener {
-    private BaseLabel associatedLabel;
+    private final BaseLabel associatedLabel;
     public BaseButton(String iconPath,BaseLabel label) {
         ImageIcon imageIcon = new ImageIcon(iconPath);
 
