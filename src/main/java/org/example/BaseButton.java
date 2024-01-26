@@ -7,7 +7,8 @@ import java.awt.event.ActionListener;
 
 public class BaseButton extends JButton implements ActionListener {
     private final BaseLabel associatedLabel;
-    public BaseButton(String iconPath,BaseLabel label) {
+
+    public BaseButton(String iconPath,BaseLabel label ) {
         ImageIcon imageIcon = new ImageIcon(iconPath);
 
         this.setSize(50, 50);
@@ -33,15 +34,15 @@ public class BaseButton extends JButton implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == this){
-            String currentText = associatedLabel.getText();
-            System.out.println(currentText);
+            String currentText1 = associatedLabel.getText();
 
-            if("CELSIUS".equals(currentText)){
+            if("CELSIUS".equals(currentText1)){
                 associatedLabel.setText("FAHRENHEIT");
             }
-            if("FAHRENHEIT".equals(currentText)){
+            if("FAHRENHEIT".equals(currentText1)){
                 associatedLabel.setText("CELSIUS");
             }
+
         }
     }
 }
